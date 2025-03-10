@@ -5,65 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio website of Pallabi Adhikari showcasing skills, hobbies, and contact information.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   <title>Portfolio</title>
 </head>
 <body>
   <header>
     <div class="container">
     <h1>My Portfolio</h1>
-    <nav>
-      <a href="#about">About Me</a>
-      <a href="#skill">Skills</a>
-      <a href="#project">Projects</a>
-      <a href="#hobbies">Hobbies</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
+  <section id="home">
+    <h2>Welcome to My Portfolio</h2>
+    <p>Hi, I'm Pallabi Adhikari, a passionate BIT student with a love for coding and technology.</p>
+  </section>
+
   <section id="about">
     <h2>About Me</h2>
-    <img src="pallabi.jpg" alt="Picture of Pallabi Adhikari">
-    <p>
-      Hello! I'm Pallabi Adhikari. 
-      <br>
-      I'm an IT student passionate about technology, coding, and solving real-world problems. I enjoy learning new programming languages and exploring emerging technologies.
-    </p>
+    <div class="image-slider" onclick="nextSlide()">
+      <img id="slider-img" src="{{ url_for('static', filename='image/pallabi.jpg') }}" alt="Profile Picture">
+    </div>
+    <p>I am a 2nd-year BIT student at Texas College of Management and IT. I enjoy learning new programming languages and building projects that solve real-world problems.</p>
+    <h3>My Passion</h3>
+    <p>I love creating web applications, solving complex problems, and learning new technologies to enhance user experiences.</p>
+    <h3>My Mission</h3>
+    <p>My mission is to become a skilled software developer, contribute to innovative projects, and help others through technology.</p>
   </section>
 
-  <section id="skill">
-    <h2>Skills</h2>
+  <section id="resume">
+    <h2>Resume</h2>
+    <h3>Education</h3>
     <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Networking Basics</li>
+      <li><strong>Bachelor of Information Technology (BIT)</strong> - Texas College of Management and IT, 2027 
+      <br>
+    Currently Pursuing my degree on WebDevelopment, Networking and CyberSecurity.
+    </li>
+      <li><strong>High School</strong> - St. Lawrence, 2022
+      <br>
+    Completed my high school in science for the base of my carrer in Technology. 
+    </li>
+    <li><strong>Secondary Level Education</strong> - centennial Secondary School, 2020
+    <br>
+    Completed my secondary level education with a good academic record.
+    
+  </li>
     </ul>
-  </section>
 
-  <section id="project">
-    <h2>Projects</h2>
+    <h3>Skills</h3>
+    <ul>
+      <li>Programming Languages: Python, Java, C</li>
+      <li>Web Development: HTML, CSS, JavaScript</li>
+      <li>Database Management: SQL, MySQL</li>
+      <li>Networking Basics</li>
+      <li>Problem Solving</li>
+      <li>Team Collaboration</li>
+    </ul>
+
+    <h3>Projects</h3>
     <div class="project">
-      <h3>Portfolio Website</h3>
-    <p>A personal portfolio built using HTML and CSS to showcase my projects and skills.</p>
-    <a href="https://github.com/Pallabi-62/Portfolio" target="_blank">View on GitHub</a>
-  </div>
-  <div class="project">
-    <h3>Student Management System</h3>
-    <p>A Java application to manage student records, featuring CRUD operations and a user-friendly interface.</p>
-    <a href="https://github.com/Pallabi-62/SMS" target="_blank">View on GitHub</a>
-  </div>
+      <h4>Portfolio Website</h4>
+      <p>A personal portfolio built using HTML, CSS, and JavaScript to showcase my projects and skills.</p>
+      <a href="https://github.com/Pallabi-62/Portfolio" target="_blank">View on GitHub</a>
+    </div>
     <div class="project">
-      <h3>Basic Networking Simulation</h3>
+      <h4>Student Management System</h4>
+      <p>A Java application to manage student records, featuring CRUD operations and a user-friendly interface.</p>
+      <a href="https://github.com/Pallabi-62/SMS" target="_blank">View on GitHub</a>
+    </div>
+    <div class="project">
+      <h4>Basic Networking Simulation</h4>
       <p>A simulation of a small network using Cisco Packet Tracer to demonstrate networking concepts.</p>
     </div>
-  </section>
-  
-  <section id="hobbies">
-    <h2>Hobbies</h2>
-    <p>I love coding, playing badminton and table tennis, and dancing.</p>
   </section>
 
   <section id="contact">
@@ -83,6 +102,11 @@
       </div>
       <button type="submit">Submit</button>
     </form>
+    <div class="social-links">
+      <a href="https://github.com/Pallabi-62" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/pallabi-adhikari-a517652b5" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://instagram.com/its_pallabi_62" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
   </section>
 
   <button id="scrollToTop" style="display: none; position: fixed; bottom: 50px; right: 20px; padding: 15px; background: #ff758c; color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
